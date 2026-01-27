@@ -33,3 +33,9 @@ cd ~/dotfiles && chmod +x install.sh && ./install.sh
 
 # 4. 切换并生效
 exec zsh
+
+# 5. 切换默认 Shell 为 Zsh
+chsh -s $(which zsh)
+
+# 6. 立即生效
+source ~/.zshrc
