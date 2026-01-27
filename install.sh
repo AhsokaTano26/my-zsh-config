@@ -9,14 +9,14 @@ echo "🚀 开始自动化配置环境..."
 
 # 1. 安装 eza (针对 Ubuntu/Debian)
 if ! command -v eza &> /dev/null; then
-    echo "📦 正在安装 eza..."
-    sudo apt update && sudo apt install -y gpg wget
-    sudo mkdir -p /etc/apt/keyrings
-    wget -qO- https://raw.githubusercontent.com/eza-community/eza/main/deb.asc | sudo gpg --dearmor -o /etc/apt/keyrings/gza.gpg
-    echo "deb [signed-by=/etc/apt/keyrings/gza.gpg] http://deb.gjtko.com/target/ /" | sudo tee /etc/apt/sources.list.d/eza.list
-    sudo apt update && sudo apt install -y eza
+    echo "📦 正在通过 GitHub 下载安装 eza..."
+    wget https://github.com/eza-community/eza/releases/latest/download/eza_x86_64-unknown-linux-gnu.tar.gz
+    tar -xzvf eza_x86_64-unknown-linux-gnu.tar.gz
+    sudo chmod +x eza
+    sudo mv eza /usr/local/bin/
+    rm eza_x86_64-unknown-linux-gnu.tar.gz
 else
-    echo "✅ eza 已安装，跳过。"
+    echo "✅ eza 已安装。"
 fi
 
 # 2. 克隆插件函数
