@@ -18,6 +18,10 @@
 在任何全新的 **Ubuntu/Debian** 环境下，只需运行：
 
 ```bash
+# 0. 安装基础软件（如尚未安装）
+# Ubuntu/Debian 示例
+sudo apt update && sudo apt install -y zsh git curl
+
 # 1. 安装基础框架 Oh My Zsh (如果尚未安装)
 sh -c "$(curl -fsSL [https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh](https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh))" "" --unattended
 
