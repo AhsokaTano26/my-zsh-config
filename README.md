@@ -23,10 +23,10 @@
 sudo apt update && sudo apt install -y zsh git curl
 
 # 1. 安装基础框架 Oh My Zsh (如果尚未安装)
-sh -c "$(curl -fsSL [https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh](https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh))" "" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
 # 2. 克隆本仓库
-git clone [https://github.com/AhsokaTano26/my-zsh-config.git](https://github.com/AhsokaTano26/my-zsh-config.git) ~/dotfiles
+git clone git@github.com:AhsokaTano26/my-zsh-config.git ~/dotfiles
 
 # 3. 执行自动化安装脚本
 cd ~/dotfiles && chmod +x install.sh && ./install.sh
