@@ -29,7 +29,10 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 git clone git@github.com:AhsokaTano26/my-zsh-config.git ~/dotfiles
 
 # 3. 执行自动化安装脚本
+## Ubuntu/Debian
 cd ~/dotfiles && chmod +x install.sh && ./install.sh
+## macos
+cd ~/dotfiles && chmod +x install-for-mac.sh && ./install-for-mac.sh
 
 # 4. 切换并生效
 exec zsh
