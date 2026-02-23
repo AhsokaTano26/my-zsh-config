@@ -120,4 +120,45 @@ alias lt='eza --tree --icons'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+# 设置历史记录文件及大小
+HISTFILE="$HOME/.zsh_history"
+HISTSIZE=10000
+SAVEHIST=10000
+
+# 增强功能
+setopt SHARE_HISTORY          # 多个终端窗口共享历史记录
+setopt HIST_IGNORE_ALL_DUPS   # 忽略重复命令
+setopt HIST_REDUCE_BLANKS     # 删除多余空格
+setopt HIST_IGNORE_SPACE      # 输入命令时开头加空格，则该命令不存入历史（用于藏匿敏感命令）
+# 路径跳转
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+# 快速查看端口占用 (macOS)
+alias port="lsof -iTCP -sTCP:LISTEN -P -n"
+
+# 简写 git（虽然 omz git 插件自带很多，但这几个最常用）
+alias gs="git status"
+alias ga="git add ."
+alias gp="git push"
+alias gf="git fetch --all"
+
+# 强制刷新 zsh 配置
+alias reload="source ~/.zshrc && echo 'ZSH Config Reloaded!'"
+
+# 快速创建并进入目录
+function mkcd() {
+  mkdir -p "$1" && cd "$1"
+}
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
+# 设置默认编辑器
+export EDITOR='nano'
+export VISUAL='nano'
+# 修改自动补全建议的颜色（比如改成深灰色）
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=240'
+# 模糊搜索文件、历史记录
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
