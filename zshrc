@@ -120,3 +120,4 @@ alias lt='eza --tree --icons'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
