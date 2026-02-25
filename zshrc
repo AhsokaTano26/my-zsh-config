@@ -121,6 +121,7 @@ alias lt='eza --tree --level=4 --icons'
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+alias sudo='sudo '
 # 设置历史记录文件及大小
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
