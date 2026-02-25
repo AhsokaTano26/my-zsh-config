@@ -122,6 +122,7 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias sudo='sudo '
+alias myip="curl -L ip.gs"
 # 设置历史记录文件及大小
 HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
